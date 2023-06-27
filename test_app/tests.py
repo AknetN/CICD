@@ -8,6 +8,6 @@ class AddUserTestCase(TestCase):
         self.assertEqual(form.is_valid(), False)
     
     def test_valid_user_form(self):
-        data = {'username': 'julia', 'email': 'test@example.com', 'password': '1234'}
+        data = {'username': 'julia', 'email': 'test@example.com', 'password': '1234', 'country': 'US'}
         form = UserForm(data)
         self.assertEqual(form.is_valid(), True)
